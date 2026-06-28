@@ -1,0 +1,17 @@
+#!/bin/bash
+# Este script lo usa el cliente dentro de su contenedor
+
+NUEVO_USUARIO=$1
+
+if [ -z "$NUEVO_USUARIO" ]; then
+  echo "Uso: crear-usuario-web <nombre_usuario>"
+  exit 1
+fi
+
+# Crea el usuario aislando su directorio en la carpeta compartida
+useradd -m -d /var/www/html/$NUEVO_USUARIO -s /bin/bash $NUEVO_USUARIO
+
+# Le asigna una contraseña interactiva
+passwd $NUEVO_USUARIO
+
+echo "Usuario $NUEVO_USUARIO creado exitosamente para operar en la web."
