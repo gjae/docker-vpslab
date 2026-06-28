@@ -28,8 +28,8 @@ Para desplegar esta arquitectura en producción, tu servidor anfitrión debe cum
    git clone [https://github.com/gjae/docker-vpslab.git](https://github.com/gjae/docker-vpslab.git)
    cd docker-vpslab
    sudo chmod +x scripts/provisionar-micro-vps.sh
-   sudo ./provisionar-micro-vps.sh <usuario_virtualmin> <puerto_ssh> <password_root> [memoria] [cpus]
-   sudo ./provisionar-micro-vps.sh cliente1 2201 ClaveSegura123 4g 1.5```
+   sudo ./newcustomer.sh <usuario_virtualmin> <puerto_ssh> <password_root> [memoria] [cpus]
+   sudo ./newcustomer.sh cliente1 2201 ClaveSegura123 4g 1.5 10G```
 
 ### TODO
 - Adaptar a podman 
